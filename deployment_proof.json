@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-11-22T21:28:27.855Z",
+  "deployer": "0xda4A61343Cc7624e372BaA7a880000576497e782",
+  "chains": {
+    "originAndDestination": {
+      "name": "Base Sepolia",
+      "chainId": 84532,
+      "callbackProxy": "0x476F44b11F5C942c58f4c8E3d0300E5710743585",
+      "explorer": "https://sepolia.basescan.org"
+    },
+    "reactive": {
+      "name": "Reactive Lasna",
+      "chainId": 5318007,
+      "systemContract": "0x8888888888888888888888888888888888888888",
+      "explorer": "https://lasna.reactscan.net"
+    }
+  },
+  "deployments": {
+    "FastPriceOraclePool": {
+      "address": "0x6b1CD0358E05257c2B352B1Ac94489057edaeDd9",
+      "txHash": "0xf3d60b55e16e01d85ff6bfc8c21e8d509b55fa7b3a256e85c3c91dfd1f3125fc"
+    },
+    "SentinelExecutionVault": {
+      "address": "0x5946893aB70a4a140a9b5aEAF12e61A515e2CF21",
+      "txHash": "0x66404a42c5a87764e9eaa91c7361e89676a74474351e3799ed53ce8dc6b68831"
+    },
+    "OmniSentinelReactive": {
+      "address": "0xAFE1f520B2970728235856b8C99157184518C45a",
+      "txHash": "0x68bf4a16d8f7f2b915e8bf96699111302a8243d4647b109926b5658e7208ace8"
+    }
+  },
+  "transactions": {
+    "faucetTxHash": "0xdbca93c5db52cceeb729f5049dd20401d1ac7387fccebc264a0f7c1ad6aa4e50",
+    "bindTxHash": "0xc688b7e03c94be25d1bb6089fac28934c1fd605f4288f90106c79a99327ff1b3",
+    "activateSubscriptionsTxHash": "0xa202edd8f934b876da17e95a72811f67b35a5a1d023eb4121765ac6e31b3021c",
+    "openOrder1TxHash": "0x4d1a921d41fd0390d48bf29e78c248a6966eb9712dee1ef4e9e0a4c7e1641780",
+    "openOrder2TxHash": "0xabcbb59f857faa9c267327fea18a2a8025c3361df258e8770f0fc9047a5ee26d",
+    "pricePeak3200TxHash": "0xdc6414e932a72916828005596a0ad6ffae73e2844fa4ee5daaaa489c10f65b9b",
+    "triggerTrailingStopTxHash": "0x9cd5b81d23cd664651f51b752fbddc14720b29d4a524f14f1bc0a05dd47695c9",
+    "triggerStopLossTxHash": "0xd4225eaedd367b48e18ebb4fdf640af9dbd19c1c7c209071b0ff72823c3ed080",
+    "reactiveDispatchTxs": [
+      {
+        "orderId": 2,
+        "kind": "TRAILING_STOP",
+        "txHash": "0x4208c43ba2ef5acf49b2430e2ff6b6721cb4b92b8bc97d4f9fb15671a7175b8d",
+        "blockNumber": 9004526
+      },
+      {
+        "orderId": 1,
+        "kind": "STOP_LOSS",
+        "txHash": "0x177671cbcc09d4afa4b3341a50b5e829bbc4a0830770178c11ddc31ecba4eb69",
+        "blockNumber": 9004527
+      }
+    ],
+    "destinationCallbackTxs": [
+      {
+        "orderId": 2,
+        "kind": 3,
+        "txHash": "0x4513766adccdf63e91ad7e825a0f6ae18c60394b07512a1cfb9d1b8fed44acd2",
+        "blockNumber": 62305164,
+        "endToEndLatencySec": 2
+      },
+      {
+        "orderId": 1,
+        "kind": 1,
+        "txHash": "0xac2baf24d27925db7eb80abc6fdbb925d6f52548358aff7318f64de335806055",
+        "blockNumber": 62305170,
+        "endToEndLatencySec": 1
+      }
+    ],
+    "reactiveRuleRegisteredTxs": [
+      {
+        "orderId": 1,
+        "txHash": "0x7fa2456a9a3dfd6539474cf13191c4698487263b9857654dd9da197d1625b2fc",
+        "blockNumber": 9004514
+      },
+      {
+        "orderId": 2,
+        "txHash": "0xda459446cec5d1223a08ec89bfc425e8ff40ad4baf9dc6512ed94455e870e67a",
+        "blockNumber": 9004515
+      }
+    ],
+    "reactiveHighWaterTx": {
+      "orderId": 2,
+      "newPeakUsd": 3200,
+      "dynamicStopUsd": 3040,
+      "txHash": "0xae89e65f077ce8e43017cd81aec46e48b02fe92455512f4a44d06c676d48feb9",
+      "blockNumber": 9004523
+    }
+  },
+  "benchmarks": {
+    "order1StopLoss": {
+      "orderId": 1,
+      "kind": "STOP_LOSS",
+      "executedPriceUsd": 2850,
+      "originEventTimestamp": 1795382901,
+      "callbackExecutedAt": 1795382902,
+      "endToEndLatencySec": 1,
+      "wallClockMs": 8030,
+      "receiptKey": "0xa5399ec7d942121832937f3b3de698448290d778b4b6b125a26115f0fad3ac3e"
+    },
+    "order2TrailingStop": {
+      "orderId": 2,
+      "kind": "TRAILING_STOP",
+      "executedPriceUsd": 3000,
+      "originEventTimestamp": 1795382899,
+      "callbackExecutedAt": 1795382901,
+      "endToEndLatencySec": 2,
+      "wallClockMs": 9184,
+      "receiptKey": "0xd79f78898615ed4a3ccf13603e424df6604ad40ea685d5d57f0724eea8b569f1"
+    }
+  }
+}

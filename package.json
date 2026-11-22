@@ -1,0 +1,19 @@
+{
+  "name": "reactive-omni-sentinel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sub-second Cross-Chain DeFi Stop-Loss, Take-Profit & Liquidation Guard powered by Reactive Omni (1s finality) + Base Sepolia (200ms blocks)",
+  "scripts": {
+    "test": "node --test test/sentinel.test.mjs",
+    "deploy": "node scripts/deploy_and_benchmark.mjs",
+    "faucet": "node scripts/request_lreact.mjs"
+  },
+  "dependencies": {
+    "ethers": "^6.15.0",
+    "solc": "^0.8.29"
+  },
+  "devDependencies": {
+    "@foundry-rs/anvil-win32-amd64": "^1.0.0"
+  }
+}
